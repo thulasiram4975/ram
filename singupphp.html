@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+ <h2>Create New Account</h2><br><br>
+First Name :<input type="text" id="fname" name="fname">
+Last Name :<input type="text" id="lname" name="lname"><br><br>
+I am :<select id="gender" name="gender">
+     <option value="male">Male</option>
+     <option value="female">Female</option>
+     <option value="transgender">Transgender</option>
+ </select><br><br>
+Birthday :<select id="date" name="date">
+     {%for i in a%}
+     <option value="{{i}}">{{i}}</option>
+     {%endfor%}
+ </select>
+<select id="month" name="month">
+    <option value="January">January</option>
+     <option value="February">February</option>
+     <option value="March">March</option>
+     <option value="April">April</option>
+     <option value="May">May</option>
+     <option value="June">June</option>
+     <option value="July">July</option>
+     <option value="August">August</option>
+     <option value="September">September</option>
+     <option value="October">October</option>
+     <option value="November">November</option>
+     <option value="December">December</option>
+</select>
+<select id="year" name="year">
+    <?php
+    foreach($b as $key=>$value)
+    {
+    <option value="$value">$value</option>
+    }
+    ?>
+</select><br><br>
+Email Id :<input type="email" id="email" name="email"><br><br>
+Create Password :<input type="password" id="pwd" name="pwd"><br><br>
+Re-type Password :<input type="password" id="pwd1" name="pwd"><br><br>
+Addhaar Id Number :<input type="number" id="addhaar" name="addhaar" minlength="12" maxlength="12"><br><br>
+Phone number as in Addhaar :<input type="number" id="phone" name="phone"><br><br>
+<button type="submit" id="signup" name="signup">Signup</button>
+
+
+</body>
+</html>
